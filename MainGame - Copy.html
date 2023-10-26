@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>newDocument</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script
+      src="https://kit.fontawesome.com/9b9ff3c79a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section class="gamebody">
+      <section class="GameData edata">
+        <section class="blackpeice Epeice" id="elemenatedBlackPeice">
+          <h1 class="Heading">Elemenated Peices</h1>
+        </section>
+        <section class="whitepeice Epeice" id="elemenatedWhitePeice">
+          <h1 class="Heading">Elemenated Peices</h1>
+        </section>
+      </section>
+      
+      <section class="chessboard">
+        <section class="row">
+          <section id="a1" class="white cell" onclick="validmove('a1')">
+            <img
+              src="elements/wr.png"
+              onclick="move('wr')"
+              onclick="peice_color('white')"
+              alt="White_Rook"
+              class="element Wpeice"
+            />
+          </section>
+          <section id="a2" class="black cell" onclick="validmove('a2')">
+            <img
+              src="elements/wn.png"
+              onclick="move('wn')"
+              onclick="peice_color('white')"
+              alt="White_Knight"
+              class="element Wpeice"
+            />
+          </section>
+          <section id="a3" class="white cell" onclick="validmove('a3')">
+            <img
+              src="elements/wb.png"
+              onclick="move('wb')"
+              onclick="peice_color('white')"
+              alt="White_Knight"
+              class="element Wpeice"
+            />
+          </section>
+          <section id="a4" class="black cell" onclick="validmove('a4')">
+            <img
+              src="elements/wk.png"
+              onclick="move('wk')"
+              onclick="peice_color('white')"
+              alt="White_King"
+              class="element White_King Wpeice"
+            />
+          </section>
+          <section id="a5" class="white cell" onclick="validmove('a5')">
+            <img
+              src="elements/wq.png"
+              onclick="move('wq')"
+              onclick="peice_color('white')"
+              alt="White_queen"
+              class="element Wpeice"
+            />
+          </section>
+          <section id="a6" class="black cell" onclick="validmove('a6')">
+            <img
+              src="elements/wb.png"
+              onclick="move('wb')"
+              onclick="peice_color('white')"
+              alt="White_Knight"
+              class="element Wpeice"
+            />
+          </section>
+          <section id="a7" class="white cell" onclick="validmove('a7')">
+            <img
+              src="elements/wn.png"
+              onclick="move('wn')"
+              onclick="peice_color('white')"
+              alt="White_Knight"
+              class="element Wpeice"
+            />
+          </section>
+          <section id="a8" class="black cell" onclick="validmove('a8')">
+            <img
+              src="elements/wr.png"
+              onclick="move('wr')"
+              onclick="peice_color('white')"
+              alt="White_Rook"
+              class="element Wpeice"
+            />
+          </section>
+        </section>
+        <section class="row">
+          <section id="b1" class="black cell" onclick="validmove('b1')">
+            <img
+              src="elements/wp.png"
+              onclick="move('wpawn')"
+              onclick="peice_color('white')"
+              class="element Wpeice"
+              alt="Pawn"
+            />
+          </section>
+          <section id="b2" class="white cell" onclick="validmove('b2')">
+            <img
+              src="elements/wp.png"
+              onclick="move('wpawn')"
+              onclick="peice_color('white')"
+              class="element Wpeice"
+              alt="Pawn"
+            />
+          </section>
+          <section id="b3" class="black cell" onclick="validmove('b3')">
+            <img
+              src="elements/wp.png"
+              onclick="move('wpawn')"
+              onclick="peice_color('white')"
+              class="element Wpeice"
+              alt="Pawn"
+            />
+          </section>
+          <section id="b4" class="white cell" onclick="validmove('b4')">
+            <img
+              src="elements/wp.png"
+              onclick="move('wpawn')"
+              onclick="peice_color('white')"
+              class="element Wpeice"
+              alt="Pawn"
+            />
+          </section>
+          <section id="b5" class="black cell" onclick="validmove('b5')">
+            <img
+              src="elements/wp.png"
+              onclick="move('wpawn')"
+              onclick="peice_color('white')"
+              class="element Wpeice"
+              alt="Pawn"
+            />
+          </section>
+          <section id="b6" class="white cell" onclick="validmove('b6')">
+            <img
+              src="elements/wp.png"
+              onclick="move('wpawn')"
+              onclick="peice_color('white')"
+              class="element Wpeice"
+              alt="Pawn"
+            />
+          </section>
+          <section id="b7" class="black cell" onclick="validmove('b7')">
+            <img
+              src="elements/wp.png"
+              onclick="move('wpawn')"
+              onclick="peice_color('white')"
+              class="element Wpeice"
+              alt="Pawn"
+            />
+          </section>
+          <section id="b8" class="white cell" onclick="validmove('b8')">
+            <img
+              src="elements/wp.png"
+              onclick="move('wpawn')"
+              onclick="peice_color('white')"
+              class="element Wpeice"
+              alt="Pawn"
+            />
+          </section>
+        </section>
+        <section class="row">
+          <section
+            id="c1"
+            class="white cell"
+            onclick="validmove('c1')"
+          ></section>
+          <section
+            id="c2"
+            class="black cell"
+            onclick="validmove('c2')"
+          ></section>
+          <section
+            id="c3"
+            class="white cell"
+            onclick="validmove('c3')"
+          ></section>
+          <section
+            id="c4"
+            class="black cell"
+            onclick="validmove('c4')"
+          ></section>
+          <section
+            id="c5"
+            class="white cell"
+            onclick="validmove('c5')"
+          ></section>
+          <section
+            id="c6"
+            class="black cell"
+            onclick="validmove('c6')"
+          ></section>
+          <section
+            id="c7"
+            class="white cell"
+            onclick="validmove('c7')"
+          ></section>
+          <section
+            id="c8"
+            class="black cell"
+            onclick="validmove('c8')"
+          ></section>
+        </section>
+        <section class="row">
+          <section
+            id="d1"
+            class="black cell"
+            onclick="validmove('d1')"
+          ></section>
+          <section
+            id="d2"
+            class="white cell"
+            onclick="validmove('d2')"
+          ></section>
+          <section
+            id="d3"
+            class="black cell"
+            onclick="validmove('d3')"
+          ></section>
+          <section
+            id="d4"
+            class="white cell"
+            onclick="validmove('d4')"
+          ></section>
+          <section
+            id="d5"
+            class="black cell"
+            onclick="validmove('d5')"
+          ></section>
+          <section
+            id="d6"
+            class="white cell"
+            onclick="validmove('d6')"
+          ></section>
+          <section
+            id="d7"
+            class="black cell"
+            onclick="validmove('d7')"
+          ></section>
+          <section
+            id="d8"
+            class="white cell"
+            onclick="validmove('d8')"
+          ></section>
+        </section>
+        <section class="row">
+          <section
+            id="e1"
+            class="white cell"
+            onclick="validmove('e1')"
+          ></section>
+          <section
+            id="e2"
+            class="black cell"
+            onclick="validmove('e2')"
+          ></section>
+          <section
+            id="e3"
+            class="white cell"
+            onclick="validmove('e3')"
+          ></section>
+          <section
+            id="e4"
+            class="black cell"
+            onclick="validmove('e4')"
+          ></section>
+          <section
+            id="e5"
+            class="white cell"
+            onclick="validmove('e5')"
+          ></section>
+          <section
+            id="e6"
+            class="black cell"
+            onclick="validmove('e6')"
+          ></section>
+          <section
+            id="e7"
+            class="white cell"
+            onclick="validmove('e7')"
+          ></section>
+          <section
+            id="e8"
+            class="black cell"
+            onclick="validmove('e8')"
+          ></section>
+        </section>
+        <section class="row">
+          <section
+            id="f1"
+            class="black cell"
+            onclick="validmove('f1')"
+          ></section>
+          <section
+            id="f2"
+            class="white cell"
+            onclick="validmove('f2')"
+          ></section>
+          <section
+            id="f3"
+            class="black cell"
+            onclick="validmove('f3')"
+          ></section>
+          <section
+            id="f4"
+            class="white cell"
+            onclick="validmove('f4')"
+          ></section>
+          <section
+            id="f5"
+            class="black cell"
+            onclick="validmove('f5')"
+          ></section>
+          <section
+            id="f6"
+            class="white cell"
+            onclick="validmove('f6')"
+          ></section>
+          <section
+            id="f7"
+            class="black cell"
+            onclick="validmove('f7')"
+          ></section>
+          <section
+            id="f8"
+            class="white cell"
+            onclick="validmove('f8')"
+          ></section>
+        </section>
+        <section class="row">
+          <section id="g1" class="white cell" onclick="validmove('g1')">
+            <img
+              src="elements/bp.png"
+              onclick="move('bpawn')"
+              onclick="peice_color('black')"
+              alt="Black_Pawn"
+              class="element bpeice"
+            />
+          </section>
+          <section id="g2" class="black cell" onclick="validmove('g2')">
+            <img
+              src="elements/bp.png"
+              onclick="move('bpawn')"
+              onclick="peice_color('black')"
+              alt="Black_Pawn"
+              class="element bpeice"
+            />
+          </section>
+          <section id="g3" class="white cell" onclick="validmove('g3')">
+            <img
+              src="elements/bp.png"
+              onclick="move('bpawn')"
+              onclick="peice_color('black')"
+              alt="Black_Pawn"
+              class="element bpeice"
+            />
+          </section>
+          <section id="g4" class="black cell" onclick="validmove('g4')">
+            <img
+              src="elements/bp.png"
+              onclick="move('bpawn')"
+              onclick="peice_color('black')"
+              alt="Black_Pawn"
+              class="element bpeice"
+            />
+          </section>
+          <section id="g5" class="white cell" onclick="validmove('g5')">
+            <img
+              src="elements/bp.png"
+              onclick="move('bpawn')"
+              onclick="peice_color('black')"
+              alt="Black_Pawn"
+              class="element bpeice"
+            />
+          </section>
+          <section id="g6" class="black cell" onclick="validmove('g6')">
+            <img
+              src="elements/bp.png"
+              onclick="move('bpawn')"
+              onclick="peice_color('black')"
+              alt="Black_Pawn"
+              class="element bpeice"
+            />
+          </section>
+          <section id="g7" class="white cell" onclick="validmove('g7')">
+            <img
+              src="elements/bp.png"
+              onclick="move('bpawn')"
+              onclick="peice_color('black')"
+              alt="Black_Pawn"
+              class="element bpeice"
+            />
+          </section>
+          <section id="g8" class="black cell" onclick="validmove('g8')">
+            <img
+              src="elements/bp.png"
+              onclick="move('bpawn')"
+              onclick="peice_color('black')"
+              alt="Black_Pawn"
+              class="element bpeice"
+            />
+          </section>
+        </section>
+        <section class="row">
+          <section id="h1" class="black cell" onclick="validmove('h1')">
+            <img
+              src="elements/br.png"
+              onclick="move('br')"
+              onclick="peice_color('black')"
+              alt="Black_Rook"
+              class="element bpeice"
+            />
+          </section>
+          <section id="h2" class="white cell" onclick="validmove('h2')">
+            <img
+              src="elements/bn.png"
+              onclick="move('bn')"
+              onclick="peice_color('black')"
+              alt="Black_Kinght"
+              class="element bpeice"
+            />
+          </section>
+          <section id="h3" class="black cell" onclick="validmove('h3')">
+            <img
+              src="elements/bb.png"
+              onclick="move('bb')"
+              onclick="peice_color('black')"
+              alt="Black_bishop"
+              class="element bpeice"
+            />
+          </section>
+          <section id="h4" class="white cell" onclick="validmove('h4')">
+            <img
+              src="elements/bq.png"
+              onclick="move('bq')"
+              onclick="peice_color('black')"
+              alt="Black_Queen"
+              class="element bpeice"
+            />
+          </section>
+          <section id="h5" class="black cell" onclick="validmove('h5')">
+            <img
+              src="elements/bk.png"
+              onclick="move('bk')"
+              onclick="peice_color('black')"
+              alt="Black_King"
+              class="element Black_King bpeice"
+            />
+          </section>
+          <section id="h6" class="white cell" onclick="validmove('h6')">
+            <img
+              src="elements/bb.png"
+              onclick="move('bb')"
+              onclick="peice_color('black')"
+              alt="Black_bishop"
+              class="element bpeice"
+            />
+          </section>
+          <section id="h7" class="black cell" onclick="validmove('h7')">
+            <img
+              src="elements/bn.png"
+              onclick="move('bn')"
+              onclick="peice_color('black')"
+              alt="Black_Kinght"
+              class="element bpeice"
+            />
+          </section>
+          <section id="h8" class="white cell" onclick="validmove('h8')">
+            <img
+              src="elements/br.png"
+              onclick="move('br')"
+              onclick="peice_color('black')"
+              alt="Black_Rook"
+              class="element bpeice"
+            />
+          </section>
+        </section>
+      </section>
+      <section class="blackpeice GameData MoveData">
+        <h1 class="Heading">Moves</h1>
+        <ol id="MovementOL">
+          
+        </ol>
+      </section>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
