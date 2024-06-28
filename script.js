@@ -1,4 +1,7 @@
+// Variable required to identify the movement of pieces
 let a,b,store,c = 0,Acolor,Bcolor,target,tlocA,tlocB,pi,pj,tomove,juptill,iuptill,jdtill,idtill,dval,diluptill,djluptill,diruptill, djruptill ,dildtill,djldtill,dirdtill, djrdtill;
+
+// Initilization of Chess Board 
 let chessboard =[
     [document.getElementById('a1'),document.getElementById('a2'),document.getElementById('a3'),document.getElementById('a4'),document.getElementById('a5'),document.getElementById('a6'),document.getElementById('a7'),document.getElementById('a8')],
     [document.getElementById('b1'),document.getElementById('b2'),document.getElementById('b3'),document.getElementById('b4'),document.getElementById('b5'),document.getElementById('b6'),document.getElementById('b7'),document.getElementById('b8')],
@@ -9,35 +12,41 @@ let chessboard =[
     [document.getElementById('g1'),document.getElementById('g2'),document.getElementById('g3'),document.getElementById('g4'),document.getElementById('g5'),document.getElementById('g6'),document.getElementById('g7'),document.getElementById('g8')],
     [document.getElementById('h1'),document.getElementById('h2'),document.getElementById('h3'),document.getElementById('h4'),document.getElementById('h5'),document.getElementById('h6'),document.getElementById('h7'),document.getElementById('h8'),]
 ]
+
+// Array of set of black and white pieces
 let whiteset =[chessboard[0][0].innerHTML,chessboard[0][1].innerHTML,chessboard[0][2].innerHTML,chessboard[0][3].innerHTML,chessboard[0][4].innerHTML,chessboard[1][0].innerHTML];
 let Blackset =[chessboard[7][0].innerHTML,chessboard[7][1].innerHTML,chessboard[7][2].innerHTML,chessboard[7][3].innerHTML,chessboard[7][4].innerHTML,chessboard[6][0].innerHTML];
+
+// alphabetPart array helps to denote the alphabet part in the alphaNumeric position of element
 let alphabetPart=['a','b','c','d','e','f','g','h']
 let Movedata= document.getElementById('MovementOL');
+
+// Location of both kings
 let whiteKing = chessboard[0][3];
 let blackKing = chessboard[7][4];
+
+// Flag variables to check the posibility of castling 
 let wLCastle=1,wRCastle=1,bLCastle=1,bRCastle=1,turn = 1;
 
+
+// functions to update the elemenated peices data 
 function elemenateBlackPeice(){
   if(chessboard[tlocA][tlocB].innerHTML!=""){
     document.getElementById('elemenatedBlackPeice').innerHTML+=chessboard[tlocA][tlocB].innerHTML;
   }
   }
-
 function elemenateWhitePeice(){
   if(chessboard[tlocA][tlocB].innerHTML!=""){
   document.getElementById('elemenatedWhitePeice').innerHTML+=chessboard[tlocA][tlocB].innerHTML;}
 }
 
 function updateMove(peice){
-  console.log(peice);
   if(peice.includes('Wpeice')){
-    Movedata.innerHTML=(`<li style="background-color:#fde8ce;"> ${alphabetPart[pi]}${pj+1}${peice}${alphabetPart[tlocB]}${tlocA+1}</li>`+Movedata.innerHTML);
+    Movedata.innerHTML=(`<li style="background-color:#fde8ce;"> ${alphabetPart[pi] || `castling`}${pj+1}${peice}${alphabetPart[tlocB]}${tlocA+1}</li>`+Movedata.innerHTML);
   }
   else{
     Movedata.innerHTML=(`<li style="background-color:#e9d6be;"> ${alphabetPart[pi]}${pj+1}${peice}${alphabetPart[tlocB]}${tlocA+1}</li>`+Movedata.innerHTML);
   }
-  
-  console.log("updateMove")
   turn = !turn;
 }
 function checkking(){
