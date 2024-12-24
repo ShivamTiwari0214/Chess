@@ -1,3 +1,13 @@
+html{
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
 .body {
   margin: 0px;
 }
@@ -12,8 +22,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 12vw;
-  height: 12vh;
+  width: 5vw;
+  height: 5vw;
   min-width: 40px;
   min-height: 40px;
   max-width: 100px;
@@ -25,25 +35,30 @@
   background-color: white;
 }
 .black {
-  background-color: rgb(138, 84, 43);
+  background-color: rgb(0, 0, 0);
   /* background-color: rgb(106, 50, 2); */
 }
 .element {
-  height: 80px;
+  height: 68px;
+  filter: drop-shadow(2px 0 white) drop-shadow(-2px 0 white)
+    drop-shadow(0 2px white) drop-shadow(0 -2px white);
 }
 
 .GameData {
+  color: white;
   box-sizing: border-box;
   display: inline-block;
-  height: 93vh;
+  height: 80vh;
   min-width: 20vw;
   max-width: 21vw;
-  /* background-color: rgb(179,71,71); */
+  
 }
 .MoveData {
+  color: white;
   border: 2px solid black;
   overflow-y: scroll;
-  /* background-color: rgb(179,71,71); */
+  border-radius: 5%;
+  background-color: #29292e;
 }
 
 /* Hide the scrollbar */
@@ -57,19 +72,35 @@
 }
 
 .gamebody {
+  align-items: center;
   padding: 0px;
   display: flex;
   flex-flow: row wrap;
-  height: 100vh;
+  height: 99vh;
   width: 98vw;
-  padding-top: 30px;
   justify-content: space-evenly;
-  align-content: space-evenly;
+  align-content: center;
   overflow-x: hidden;
 }
+
+.chessboardContainer {
+  background-color: #29292e;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45vmax;
+  width: 45vmax;
+}
+
 .chessboard {
-  display: inline-block;
+  display: flex;
+  flex-flow: row wrap;
+  width: 40vw;
+  height: 40vw;
   /* height: 100vh; */
+  border-radius: 5%;
+  overflow: hidden;
   border: 5px solid black;
   /* margin: 20px 80px 20px 80px; */
 }
@@ -81,6 +112,8 @@
   border: 2px solid black;
   margin: 0px;
   padding: 0px;
+  border-radius: 5%;
+  background-color: #29292e;
 }
 .Heading {
   text-align: center;
@@ -96,12 +129,25 @@ li {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   list-style-type: none;
-  width: auto;
+  width: 60%;
+  border-radius: 5%;
+  margin: 5px;
 }
+.elemenatedPeices{
+  margin: auto;
+  
+  /* border: 1px solid white; */
+}
+#MovementOL {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
 li .element {
-  height: 50px;
+  height: 40px;
   /* margin-left: 0px;
     margin-right: 20%; */
 }
@@ -110,24 +156,31 @@ li .element {
   justify-content: space-around;
   align-items: center;
 }
+.menuBody {
+  background-image: url(chessBackground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 Body {
-  background-image: url(chessbg2.png);
-  /* background-repeat: no-repeat; */
-  background-size: 50px;
-  background-color: bisque;
+  background-color: #07070b;
 }
 .menu {
   /* background-color: rgb(179,69,69); */
-  background-color: rgb(209, 172, 130);
-  border: 5px solid black;
+  background-color: rgba(0, 0, 0, 0.753);
+  filter: blur(1);
+  border: 2px solid black;
+  border-radius: 20px;
 }
+
 .option {
-  color: black;
+  color: white;
   font-size: 70px;
   margin: 19px;
   transition: transform 0.3s;
-  font-family: "Permanent Marker", cursive;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 600;
 }
 a {
   text-decoration: none;
@@ -141,99 +194,159 @@ a {
 
 #elemenatedBlackPeice .element {
   height: 57px;
- 
 }
 #elemenatedWhitePeice .element {
   height: 57px;
- 
 }
 @media screen and (max-width: 1404px) {
- 
+  #elemenatedBlackPeice .element {
+    height: 40px;
+  }
+  #elemenatedWhitePeice .element {
+    height: 40px;
+  }
   .gamebody {
-    height: auto;
+    height: 99vh;
+    align-items: center;
     width: 100vw;
   }
   .cell {
-    width: 7vw;
-    height: 12vh;
+    width: 5vw;
+    height: 5vw;
     min-width: none;
     min-height: none;
   }
   .element {
-    height: 76px;
+    height: 50px;
+    filter: drop-shadow(2px 0 white) drop-shadow(-2px 0 white)
+      drop-shadow(0 2px white) drop-shadow(0 -2px white);
   }
 }
 
 @media screen and (max-width: 1204px) {
   #elemenatedBlackPeice .element {
-    height: 45px;
-   
+    height: 35px;
   }
   #elemenatedWhitePeice .element {
-    height: 45px;
-   
+    height: 35px;
   }
   .element {
-    height: 66px;
+    height: 46px;
+    filter: drop-shadow(1px 0 white) drop-shadow(-1px 0 white)
+      drop-shadow(0 1px white) drop-shadow(0 -1px white);
   }
 }
 @media screen and (max-width: 1004px) {
+
+
+  #elemenatedBlackPeice .element {
+    height: 30px;
+}
+
+#elemenatedWhitePeice .element {
+  height: 30px;
+}
   .cell {
-    height: 10vh;
+    height: 4.5vw;
   }
   .chessboard {
-    height: 80vh;
+    height: 55vh;
   }
   .MoveData {
     height: 81vh;
   }
   .GameData {
-    height: 80vh;
+    height: 50vh;
   }
   .element {
-    height: 60px;
+    height: 38px;
   }
+
+  li {
+    font-size: 20px;
+    align-items: end;
+    width: 100%;
+    height: 30px;
+    margin: 1px;
+  }
+  .Heading {
+    margin: 0px;
+    padding: 5px;
+  }
+  ol {
+    margin: 10px;
+  }
+
+  li .element {
+    height: 25px;
+  }
+
+
+  .chessboardContainer {
+    background-color: #29292e;
+    border-radius: 50px;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    height: 44vmax;
+    width: 45vmax;
 }
-@media screen and (max-width: 804px) {
+}
+@media screen and (max-width: 897px) {
   .edata {
     display: none;
   }
   .cell {
-    width: 9vw;
+    width: 6.3vw;
+    height: 6.3vw;
+  }
+
+  .chessboard {
+    height: 50vw;
+    width: 50vw;
+  }
+  .chessboardContainer {
+    margin-top: 10vh;
+    height: 60vw;
+    width: 60vw;
   }
 }
 
 @media screen and (max-width: 650px) {
+
   .option {
     font-size: 30px;
   }
   .cell {
-    width: 8vw;
-    height: 8vh;
+    min-width: 0px;
+    min-height: 0px;
+    width: 6.4vw;
+    height: 6.4vw;
   }
   .element {
-    height: 44px;
+    height: 24px;
   }
   .chessboard {
-    height: 64vh;
+    height: 50vw;
+    width: 50vw;
   }
   .GameData {
-    height: 66vh;
-    width: 100vw;
+    height: 30vh;
+    width: 1vw;
   }
 }
 
 @media screen and (max-width: 450px) {
   #elemenatedBlackPeice .element {
     height: 31px;
-   
   }
   #elemenatedWhitePeice .element {
     height: 31px;
-   
   }
   .gamebody {
     display: inline-block;
+    width: 95vw;
   }
   .edata {
     display: flex;
@@ -260,8 +373,31 @@ a {
     margin-left: 30%;
     margin-right: auto;
   }
+
+  li {
+    font-size: 10px;
+    align-items: end;
+    height: 20px;
+    margin: 1px;
+  }
+  .Heading {
+    margin: 0px;
+    padding: 5px;
+  }
+  ol {
+    margin: 0px;
+  }
+
+  li .element {
+    height: 20px;
+  }
+
   .row {
     max-width: 95vw;
+  }
+  .chessboardContainer {
+    width: 95vw;
+    margin: 15vh auto 15vh;
   }
   .chessboard {
     margin-top: 10px;
