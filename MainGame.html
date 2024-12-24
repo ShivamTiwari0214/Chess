@@ -14,14 +14,18 @@
     <section class="gamebody">
       <section class="GameData edata">
         <section class="blackpeice Epeice" id="elemenatedBlackPeice">
-          <h1 class="Heading">Elemenated Peices</h1>
+          <h1 class="Heading">Eliminated Pieces</h1>
+          <div id="elemenatedBlackPeiceSet" class="elemenatedPeices"></div>
         </section>
         <section class="whitepeice Epeice" id="elemenatedWhitePeice">
-          <h1 class="Heading">Elemenated Peices</h1>
+          <h1 class="Heading">Eliminated Pieces</h1>
+          <div id="elemenatedWhitePeiceSet" class="elemenatedPeices"></div>
         </section>
       </section>
+
       
-      <section class="chessboard">
+      <section class="chessboardContainer" >
+        <section class="chessboard">
         <section class="row">
           <section id="a1" class="white cell" onclick="validmove('a1')">
             <img
@@ -487,6 +491,9 @@
           </section>
         </section>
       </section>
+      </section>
+
+
       <section class="blackpeice GameData MoveData">
         <h1 class="Heading">Moves</h1>
         <ol id="MovementOL">
